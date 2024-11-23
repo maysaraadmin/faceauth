@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="auth/faceauth/db" VERSION="2024112100" COMMENT="XMLDB file for the Face Authentication plugin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../lib/xmldb/xmldb.xsd">
+
+    <!-- Define the database structure for the Face Authentication plugin -->
+    <TABLES>
+        <!-- Table for storing facial recognition metadata -->
+        <TABLE NAME="auth_faceauth_metadata" COMMENT="Stores facial recognition data for users">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the user"/>
+                <FIELD NAME="face_data" TYPE="text" NOTNULL="true" COMMENT="Serialized or hashed facial data"/>
+                <FIELD NAME="created_at" TYPE="datetime" NOTNULL="true" COMMENT="Timestamp of record creation"/>
+                <FIELD NAME="updated_at" TYPE="datetime" COMMENT="Timestamp of last update"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="userid_fk" TYPE="foreign" FIELDS="userid" REFERENCES="user" REFFIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="idx_userid" UNIQUE="false" FIELDS="userid"/>
+            </INDEXES>
+        </TABLE>
+
+        <!-- Table for logging authentication attempts -->
+        <TABLE NAME="auth_faceauth_logs" COMMENT="Logs of facial authentication attempts">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" COMMENT="ID of the user (nullable for guest attempts)"/>
+                <FIELD NAME="status" TYPE="char" LENGTH="10" NOTNULL="true" COMMENT="Authentication status (success/failure)"/>
+                <FIELD NAME="attempt_time" TYPE="datetime" NOTNULL="true" COMMENT="Timestamp of the authentication attempt"/>
+                <FIELD NAME="ip_address" TYPE="char" LENGTH="45" COMMENT="IP address of the user during the attempt"/>
+                <FIELD NAME="error_message" TYPE="text" COMMENT="Error message in case of failure"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="idx_userid_status" UNIQUE="false" FIELDS="userid,status"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB>

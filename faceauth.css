@@ -1,0 +1,150 @@
+/* General container styling for Face Authentication */
+#faceAuth {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Capture Button Styling */
+#captureButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Buttons for Retry and Submit */
+#retryButton, #submitButton {
+    display: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Video Element Styling */
+#video {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Preview Styling */
+#imagePreview {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: none;  /* Hide preview initially */
+}
+
+/* Button Styling */
+button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover State */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Button Focus State */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Disabled Button State */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Loader Styling */
+#loader {
+    margin: 10px;
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    display: none; /* Hide loader initially */
+}
+
+/* Message Box Styling */
+.message {
+    margin: 15px auto;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Info Message */
+.message.info {
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Success Message */
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error Message */
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 480px) {
+    /* Video and Image Preview Adjustment */
+    #video, #imagePreview {
+        max-width: 100%;
+    }
+
+    /* Button Resizing for Mobile Devices */
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Message Box Responsive Adjustment */
+    .message {
+        width: 90%;
+    }
+}
