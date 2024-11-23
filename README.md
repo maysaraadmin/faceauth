@@ -2,7 +2,7 @@
 
 ---
 
-#### **Plugin Name**: Face Authentication (auth_faceauth)  
+#### **Plugin Name**: Face Authentication (faceauth)  
 #### **Version**: 1.0.0  
 #### **Moodle Compatibility**: Moodle 4.0+  
 #### **Author**: Your Name  
@@ -28,10 +28,10 @@ The Face Authentication plugin provides a seamless and secure method for Moodle 
 ### **Installation**
 
 1. **Download the Plugin**:  
-   Clone or download the plugin from the [GitHub repository](https://github.com/maysaraadmin/auth_faceauth).
+   Clone or download the plugin from the [GitHub repository](https://github.com/maysaraadmin/faceauth).
 
    ```bash
-   git clone https://github.com/maysaraadmin/auth_faceauth.git
+   git clone https://github.com/maysaraadmin/faceauth.git
    ```
 
 2. **Copy to Moodle Auth Directory**:  
@@ -107,7 +107,7 @@ This plugin is licensed under the GNU General Public License v3. For more detail
 
 ### **Support**
 
-For questions or support, please reach out via the [GitHub issues page](https://github.com/maysaraadmin/auth_faceauth/issues).
+For questions or support, please reach out via the [GitHub issues page](https://github.com/maysaraadmin/faceauth/issues).
 
 --- 
 
