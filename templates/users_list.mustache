@@ -1,0 +1,29 @@
+<div class="faceauth-users-list">
+    <h2>{{#str}} userslist, auth_faceauth {{/str}}</h2>
+    <table class="generaltable">
+        <thead>
+            <tr>
+                <th>{{#str}} fullname, auth_faceauth {{/str}}</th>
+                <th>{{#str}} username, auth_faceauth {{/str}}</th>
+                <th>{{#str}} actions, auth_faceauth {{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#users}}
+            <tr>
+                <td>{{firstname}} {{lastname}}</td>
+                <td>{{username}}</td>
+                <td>
+                    <a href="{{wwwroot}}/auth/faceauth/delete_user_image.php?userid={{id}}" class="btn btn-danger">{{#str}} deleteimage, auth_faceauth {{/str}}</a>
+                    <a href="{{wwwroot}}/auth/faceauth/analyzesingleimage.php?image_path={{image_path}}" class="btn btn-info">{{#str}} analyzeimage, auth_faceauth {{/str}}</a>
+                </td>
+            </tr>
+            {{/users}}
+            {{^users}}
+            <tr>
+                <td colspan="3">{{#str}} nousersfound, auth_faceauth {{/str}}</td>
+            </tr>
+            {{/users}}
+        </tbody>
+    </table>
+</div>

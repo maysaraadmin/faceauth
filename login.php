@@ -35,7 +35,7 @@ echo '</div>';
 // Include a fallback link for standard login.
 echo '<div class="fallback-login">';
 echo '<p>' . get_string('fallback_login_prompt', 'auth_faceauth') . '</p>';
-echo '<a href="' . new moodle_url('/login/index.php') . '">' . get_string('fallback_login_link', 'auth_faceauth') . '</a>';
+echo '<a href="' . new moodle_url('/login/index.php') . '" class="btn btn-secondary">' . get_string('fallback_login_link', 'auth_faceauth') . '</a>';
 echo '</div>';
 
 // Output the footer.

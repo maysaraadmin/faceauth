@@ -7,7 +7,7 @@
         <TABLE NAME="auth_faceauth_metadata" COMMENT="Stores facial recognition data for users">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key"/>
-                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the user"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="User ID"/>
                 <FIELD NAME="face_data" TYPE="text" NOTNULL="true" COMMENT="Serialized or hashed facial data"/>
                 <FIELD NAME="created_at" TYPE="datetime" NOTNULL="true" COMMENT="Timestamp of record creation"/>
                 <FIELD NAME="updated_at" TYPE="datetime" COMMENT="Timestamp of last update"/>

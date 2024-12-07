@@ -49,8 +49,7 @@ function xmldb_auth_faceauth_upgrade($oldversion) {
     if ($oldversion < 2024112101) {
         // Define field face_data_hash to be added to auth_faceauth.
         $table = new xmldb_table('auth_faceauth');
-        $field = new xmldb_field('face_data_hash', XMLDB_TYPE_CHAR, '64', null, null, null, null, 'face_data');
-
+        $field = new xmldb_field('face_data_hash', XMLDB_TYPE_CHAR, '64', null, null, null, null);        
         // Conditionally launch add field face_data_hash.
         if (!$dbman->field_exists($table, $field)) {
             $dbman->add_field($table, $field);

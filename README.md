@@ -5,7 +5,7 @@
 #### **Plugin Name**: Face Authentication (faceauth)  
 #### **Version**: 1.0.0  
 #### **Moodle Compatibility**: Moodle 4.0+  
-#### **Author**: Maysara Mohamed 
+#### **Author**: Your Name  
 #### **License**: [GNU GPL v3](http://www.gnu.org/copyleft/gpl.html)  
 
 ---

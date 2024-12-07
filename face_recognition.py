@@ -15,14 +15,14 @@ def main():
     username = sys.argv[1]
 
     # Path to the user's stored image.
-    stored_image_path = f'/path/to/faces/{username}.jpg'
+    stored_image_path = os.getenv('FACEAUTH_STORED_IMAGE_PATH', f'/path/to/faces/{username}.jpg')
 
     if not os.path.exists(stored_image_path):
         logging.info("NO_MATCH")
         return
 
     # Path to store the captured live image.
-    live_image_path = '/path/to/temp/live_image.jpg'
+    live_image_path = os.getenv('FACEAUTH_LIVE_IMAGE_PATH', '/path/to/temp/live_image.jpg')
 
     # Capture a live image and handle possible issues.
     if not capture_live_image(live_image_path):
@@ -39,7 +39,6 @@ def main():
     except Exception as e:
         logging.error("An error occurred during verification.")
         logging.error(e)
-
 
 def capture_live_image(output_path):
     """
@@ -66,7 +65,6 @@ def capture_live_image(output_path):
 
     cap.release()
     return True
-
 
 if __name__ == "__main__":
     main()
