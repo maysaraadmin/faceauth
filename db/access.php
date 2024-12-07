@@ -32,7 +32,7 @@ $capabilities = [
         'captype' => 'write',
         'contextlevel' => CONTEXT_USER,
         'archetypes' => [
-            'authenticated' => CAP_ALLOW,
+            'user' => CAP_ALLOW, // Corrected from 'authenticated' to 'user'
         ],
     ],
 ];
