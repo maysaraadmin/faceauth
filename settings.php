@@ -10,3 +10,6 @@ $settings->add(new admin_setting_configtext(
     '/path/to/faces',                        // Default value for the setting.
     PARAM_TEXT                               // Data validation type (string input).
 ));
+
+// Log the addition of the setting.
+debugging("Added setting 'auth_faceauth/facedata_path'", DEBUG_DEVELOPER);

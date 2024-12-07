@@ -35,7 +35,7 @@
 }
 
 /* Video Element Styling */
-#video {
+#video, #imagePreview {
     width: 100%;
     max-width: 400px;
     margin: 10px auto;
@@ -46,12 +46,6 @@
 
 /* Image Preview Styling */
 #imagePreview {
-    width: 100%;
-    max-width: 400px;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: none;  /* Hide preview initially */
 }
 

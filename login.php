@@ -3,6 +3,9 @@
 require_once(__DIR__ . '/../../config.php');
 require_once($CFG->libdir . '/authlib.php');
 
+// Ensure this script is accessed within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
 // Set up the page.
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url(new moodle_url('/auth/faceauth/login.php'));

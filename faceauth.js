@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.querySelector("#video");
     const canvas = document.querySelector("#canvas");
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch((error) => {
                 console.error("Error accessing webcam: ", error);
-                displayMessage("Error accessing webcam. Please try again.");
+                displayMessage("Error accessing webcam. Please try again.", "error");
             });
     }
 
@@ -62,7 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify({ image: imageData }),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
             .then((data) => {
                 loader.style.display = "none";
 
