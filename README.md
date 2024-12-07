@@ -32,95 +32,83 @@ The Face Authentication plugin provides a seamless and secure method for Moodle 
 
    ```bash
    git clone https://github.com/maysaraadmin/faceauth.git
-   ```
 
-2. **Copy to Moodle Auth Directory**:  
-   Place the plugin folder into the `auth` directory of your Moodle installation:
+   Copy to Moodle Auth Directory:
+   
+Place the plugin folder into the auth directory of your Moodle installation:
+mv auth_faceauth /path/to/moodle/auth/
 
-   ```bash
-   mv auth_faceauth /path/to/moodle/auth/
-   ```
 
-3. **Install the Plugin**:  
-   - Log in to Moodle as an admin.  
-   - Navigate to `Site administration > Notifications`.  
-   - Follow the prompts to complete the installation.
+install the Plugin:
 
-4. **Enable the Plugin**:  
-   - Go to `Site administration > Plugins > Authentication > Manage authentication`.  
-   - Enable **Face Authentication**.
+Log in to Moodle as an admin.
 
-5. **Configure the Plugin**:  
-   - Navigate to `Site administration > Plugins > Authentication > Face Authentication`.  
-   - Add the API URL for face verification, enable logging (optional), and save settings.
+Navigate to Site administration > Notifications.
 
----
+Follow the prompts to complete the installation.
 
-### **Usage**
+Enable the Plugin:
 
-1. Users attempting to log in will be prompted to authenticate via face capture.  
-2. The plugin verifies the face data using your configured API or custom verification logic.  
-3. On successful verification, the user is logged into Moodle.
+Go to Site administration > Plugins > Authentication > Manage authentication.
 
----
+Enable Face Authentication.
 
-### **Configuration**
+Configure the Plugin:
 
-#### **Plugin Settings**
-- **API URL**:  
-  Set the endpoint for face verification API.
-  
-- **Enable Logging**:  
-  Enable or disable logging for face authentication activities.
+Navigate to Site administration > Plugins > Authentication > Face Authentication.
 
----
+Add the API URL for face verification, enable logging (optional), and save settings.
 
-### **Developer Notes**
+Usage
+Users attempting to log in will be prompted to authenticate via face capture.
 
-#### **Core Files**:
-- **`authlib.php`**: Implements authentication logic.
-- **`login.php`**: Manages the login interface for face capture and submission.
-- **`db/install.xml`**: Defines database schema for the plugin.
-- **`db/upgrade.php`**: Handles schema updates during plugin upgrades.
+The plugin verifies the face data using your configured API or custom verification logic.
 
-#### **Frontend Dependencies**:
-- `faceauth.js`: Manages client-side operations like face capture and API requests.
-- `style.css`: Provides styling for the face authentication interface.
+On successful verification, the user is logged into Moodle.
 
-#### **Extensibility**:
-- Replace `verify_face_data` in `authlib.php` with your custom API logic or face matching algorithm.
+Configuration
+Plugin Settings
+API URL:
+Set the endpoint for face verification API.
 
----
+Enable Logging:
+Enable or disable logging for face authentication activities.
 
-### **Contributing**
+Developer Notes
+Core Files:
+authlib.php: Implements authentication logic.
 
-Contributions are welcome!  
-If you have ideas for improvement or encounter issues, please create a pull request or open an issue on the [GitHub repository](https://github.com/maysaraadmin/faceauth).
+login.php: Manages the login interface for face capture and submission.
 
----
+db/install.xml: Defines database schema for the plugin.
 
-### **License**
+db/upgrade.php: Handles schema updates during plugin upgrades.
 
-This plugin is licensed under the GNU General Public License v3. For more details, see the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) file.
+Frontend Dependencies:
+faceauth.js: Manages client-side operations like face capture and API requests.
 
----
+style.css: Provides styling for the face authentication interface.
 
-### **Support**
+Extensibility:
+Replace verify_face_data in authlib.php with your custom API logic or face matching algorithm.
 
-For questions or support, please reach out via the [GitHub issues page](https://github.com/maysaraadmin/faceauth/issues).
+Contributing
+Contributions are welcome!
+If you have ideas for improvement or encounter issues, please create a pull request or open an issue on the GitHub repository.
 
---- 
+License
+This plugin is licensed under the GNU General Public License v3. For more details, see the LICENSE file.
 
-### **Screenshots**
+Support
+For questions or support, please reach out via the GitHub issues page.
 
-1. **Login Interface**  
-   - Captures user face and displays options for retry or submission.  
+Screenshots
+Login Interface
 
-2. **Admin Settings**  
-   - Configure API endpoints and enable logging.  
+Captures user face and displays options for retry or submission.
 
-*Add screenshots to illustrate these features!*
+Admin Settings
 
----
+Configure API endpoints and enable logging.
 
-Happy Learning! 😊
+Add screenshots to illustrate these features!
